@@ -1,0 +1,11 @@
+<button (click)="login()" class="btn btn-primary" hidden>Login with google</button>
+
+<div class="login-wrp">
+  <form class="login-card" [formGroup]="loginFG" (ngSubmit)="login()">
+      <label for="email">Email:</label>
+    <input type="text" formControlName="emailFC" id="email" />
+    <label for="password">Password:</label>
+    <input type="password" formControlName="passwordFC" id="password" />
+    <button type="submit">Login</button>
+  </form>
+</div>

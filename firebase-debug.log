@@ -1,0 +1,64 @@
+[debug] [2020-11-03T17:50:59.545Z] ----------------------------------------------------------------------
+[debug] [2020-11-03T17:50:59.555Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2020-11-03T17:50:59.555Z] CLI Version:   8.14.1
+[debug] [2020-11-03T17:50:59.556Z] Platform:      linux
+[debug] [2020-11-03T17:50:59.556Z] Node Version:  v12.19.0
+[debug] [2020-11-03T17:50:59.698Z] Time:          Tue Nov 03 2020 18:50:59 GMT+0100 (Central European Standard Time)
+[debug] [2020-11-03T17:50:59.699Z] ----------------------------------------------------------------------
+[debug] [2020-11-03T17:50:59.700Z] 
+[debug] [2020-11-03T17:50:59.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-03T17:50:59.832Z] > authorizing via signed-in user
+[debug] [2020-11-03T17:50:59.832Z] [iam] checking project test-suela for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-03T17:50:59.878Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/test-suela:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-03T17:51:00.964Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 03 Nov 2020 17:51:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=124","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-03T17:51:00.968Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/test-suela/serviceAccounts/test-suela@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-11-03T17:51:01.332Z] <<< HTTP RESPONSE 404 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 03 Nov 2020 17:51:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-03T17:51:01.333Z] <<< HTTP RESPONSE BODY {"error":{"code":404,"message":"Not found; Gaia id not found for email test-suela@appspot.gserviceaccount.com","status":"NOT_FOUND"}}
+[debug] [2020-11-03T17:51:01.344Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Not found; Gaia id not found for email test-suela@appspot.gserviceaccount.com {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Not found; Gaia id not found for email test-suela@appspot.gserviceaccount.com","status":"NOT_FOUND"}},"response":{"statusCode":404,"body":{"error":{"code":404,"message":"Not found; Gaia id not found for email test-suela@appspot.gserviceaccount.com","status":"NOT_FOUND"}},"headers":{"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 03 Nov 2020 17:51:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"},"request":{"uri":{"protocol":"https:","slashes":true,"auth":null,"host":"iam.googleapis.com","port":443,"hostname":"iam.googleapis.com","hash":null,"search":null,"query":null,"pathname":"/v1/projects/test-suela/serviceAccounts/test-suela@appspot.gserviceaccount.com:testIamPermissions","path":"/v1/projects/test-suela/serviceAccounts/test-suela@appspot.gserviceaccount.com:testIamPermissions","href":"https://iam.googleapis.com/v1/projects/test-suela/serviceAccounts/test-suela@appspot.gserviceaccount.com:testIamPermissions"},"method":"POST"}}},"exit":1,"message":"HTTP Error: 404, Not found; Gaia id not found for email test-suela@appspot.gserviceaccount.com","status":404}
+[debug] [2020-11-03T17:51:01.368Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/test-suela  
+ 
+[debug] [2020-11-03T17:51:01.792Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 03 Nov 2020 17:51:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-03T17:51:21.731Z] getFunctionsSDKVersion was unable to retrieve 'firebase-functions' version
+[info] 
+[info] === Deploying to 'test-suela'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2020-11-03T17:51:21.743Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2020-11-03T17:51:22.836Z] getFunctionsSDKVersion was unable to retrieve 'firebase-functions' version
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2020-11-03T17:51:22.843Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/test-suela/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-11-03T17:51:22.845Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/test-suela/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-11-03T17:51:22.846Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/test-suela/services/cloudbuild.googleapis.com  
+ 
+[debug] [2020-11-03T17:51:32.866Z] Error: getaddrinfo EAI_AGAIN serviceusage.googleapis.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+[error] 
+[error] Error: Server Error. getaddrinfo EAI_AGAIN serviceusage.googleapis.com

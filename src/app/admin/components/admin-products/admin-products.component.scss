@@ -1,0 +1,52 @@
+table,
+.mat-paginator{
+    width:100%;
+    min-width:50vw;
+}
+
+th.mat-header-cell,
+td.mat-cell{
+    max-width: 300px;
+    font-size:1em;
+    color:#2b3d29;
+}
+
+.mat-paginator{
+    background:rgb(173, 205, 211);
+    color: #2b3d29
+}
+
+a {
+color: #2b3d29;
+}
+
+.placeholder{
+    color:rgb(43, 61, 41);
+    font-weight:500;
+    font-size:1.3em;
+}
+// Rreshtat tek
+tr.mat-row:nth-child(odd){
+    background-color: #fcfcfc;
+    
+}
+// Rreshtat cift
+tr.mat-row:nth-child(even){
+    background-color: rgb(239, 250, 174);
+    
+}
+th.mat-header-cell {
+    background-color: #c1d62e;   
+}
+th.mat-header-cell:hover {
+    background-color: #318d27;   
+}
+
+.abc {
+    background-color: #c1d62e;
+}
+
+.abc:hover {
+    background-color: #318d27;   
+
+}
